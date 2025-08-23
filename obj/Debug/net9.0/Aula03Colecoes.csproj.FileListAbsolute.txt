@@ -12,3 +12,18 @@ D:\Lucas - 2DS\DSISTEMA\Aula03-13-08\Aula03Colecoes\obj\Debug\net9.0\refint\Aula
 D:\Lucas - 2DS\DSISTEMA\Aula03-13-08\Aula03Colecoes\obj\Debug\net9.0\Aula03Colecoes.pdb
 D:\Lucas - 2DS\DSISTEMA\Aula03-13-08\Aula03Colecoes\obj\Debug\net9.0\Aula03Colecoes.genruntimeconfig.cache
 D:\Lucas - 2DS\DSISTEMA\Aula03-13-08\Aula03Colecoes\obj\Debug\net9.0\ref\Aula03Colecoes.dll
+C:\Users\lscha\Desktop\ETEC\2 semestre\DESENVOLVIMENTO DE SISTEMAS\Aula03\Aula03Colecoes\bin\Debug\net9.0\Aula03Colecoes.exe
+C:\Users\lscha\Desktop\ETEC\2 semestre\DESENVOLVIMENTO DE SISTEMAS\Aula03\Aula03Colecoes\bin\Debug\net9.0\Aula03Colecoes.deps.json
+C:\Users\lscha\Desktop\ETEC\2 semestre\DESENVOLVIMENTO DE SISTEMAS\Aula03\Aula03Colecoes\bin\Debug\net9.0\Aula03Colecoes.runtimeconfig.json
+C:\Users\lscha\Desktop\ETEC\2 semestre\DESENVOLVIMENTO DE SISTEMAS\Aula03\Aula03Colecoes\bin\Debug\net9.0\Aula03Colecoes.dll
+C:\Users\lscha\Desktop\ETEC\2 semestre\DESENVOLVIMENTO DE SISTEMAS\Aula03\Aula03Colecoes\bin\Debug\net9.0\Aula03Colecoes.pdb
+C:\Users\lscha\Desktop\ETEC\2 semestre\DESENVOLVIMENTO DE SISTEMAS\Aula03\Aula03Colecoes\obj\Debug\net9.0\Aula03Colecoes.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lscha\Desktop\ETEC\2 semestre\DESENVOLVIMENTO DE SISTEMAS\Aula03\Aula03Colecoes\obj\Debug\net9.0\Aula03Colecoes.AssemblyInfoInputs.cache
+C:\Users\lscha\Desktop\ETEC\2 semestre\DESENVOLVIMENTO DE SISTEMAS\Aula03\Aula03Colecoes\obj\Debug\net9.0\Aula03Colecoes.AssemblyInfo.cs
+C:\Users\lscha\Desktop\ETEC\2 semestre\DESENVOLVIMENTO DE SISTEMAS\Aula03\Aula03Colecoes\obj\Debug\net9.0\Aula03Colecoes.csproj.CoreCompileInputs.cache
+C:\Users\lscha\Desktop\ETEC\2 semestre\DESENVOLVIMENTO DE SISTEMAS\Aula03\Aula03Colecoes\obj\Debug\net9.0\Aula03Colecoes.sourcelink.json
+C:\Users\lscha\Desktop\ETEC\2 semestre\DESENVOLVIMENTO DE SISTEMAS\Aula03\Aula03Colecoes\obj\Debug\net9.0\Aula03Colecoes.dll
+C:\Users\lscha\Desktop\ETEC\2 semestre\DESENVOLVIMENTO DE SISTEMAS\Aula03\Aula03Colecoes\obj\Debug\net9.0\refint\Aula03Colecoes.dll
+C:\Users\lscha\Desktop\ETEC\2 semestre\DESENVOLVIMENTO DE SISTEMAS\Aula03\Aula03Colecoes\obj\Debug\net9.0\Aula03Colecoes.pdb
+C:\Users\lscha\Desktop\ETEC\2 semestre\DESENVOLVIMENTO DE SISTEMAS\Aula03\Aula03Colecoes\obj\Debug\net9.0\Aula03Colecoes.genruntimeconfig.cache
+C:\Users\lscha\Desktop\ETEC\2 semestre\DESENVOLVIMENTO DE SISTEMAS\Aula03\Aula03Colecoes\obj\Debug\net9.0\ref\Aula03Colecoes.dll
