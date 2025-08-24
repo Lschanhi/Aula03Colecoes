@@ -16,8 +16,6 @@ namespace Aula03Colecoes
             int opcao = 0;
             do
             {
-
-
                 Console.WriteLine("Digite umas das Opcoes Abaixo:");
                 Console.WriteLine("1 - Obter por Nome");
                 Console.WriteLine("2 - Excluir Id menores que 4 e ordenar por Salário");
@@ -27,9 +25,7 @@ namespace Aula03Colecoes
                 Console.WriteLine("6 - Busca por Tipo de Contrato");
                 Console.WriteLine("7 - Exibir lista Completa");
                 Console.WriteLine("8 - Sair do Sistema\n");
-
                 opcao = int.Parse(Console.ReadLine());
-
                 switch (opcao)
                 {
                     case 1:
@@ -58,7 +54,6 @@ namespace Aula03Colecoes
                     default:
                         Console.WriteLine("\nSaindo do Sistema !!!!!!!!!!! Muito obrigado\n");
                         break;
-
                 }
             }
             while (opcao >= 1 && opcao <= 7);
@@ -66,10 +61,8 @@ namespace Aula03Colecoes
         public static void ExibirLista()
         {
             string dados = "";
-            
             for (int i = 0; i < lista.Count; i++)
             {
-
                 dados += "======================================\n";
                 dados += string.Format("Id: {0}\n", lista[i].Id);
                 dados += string.Format("Nome: {0}\n", lista[i].Nome);
@@ -78,9 +71,6 @@ namespace Aula03Colecoes
                 dados += string.Format("Salario: {0:c2}\n", lista[i].Salario);
                 dados += string.Format("Tipo: {0}\n", lista[i].TipoFuncionario);
                 dados += "=====================================\n";
-
-                
-
             }
             Console.WriteLine(dados);
         }
@@ -94,7 +84,6 @@ namespace Aula03Colecoes
             f1.Salario = 100.000M;
             f1.TipoFuncionario = TipoFuncionarioEnum.CLT;
             lista.Add(f1);
-
             Funcionario f2 = new Funcionario();
             f2.Id = 2;
             f2.Nome = "Cristiano Ronaldo";
@@ -103,7 +92,6 @@ namespace Aula03Colecoes
             f2.Salario = 150.000M;
             f2.TipoFuncionario = TipoFuncionarioEnum.CLT;
             lista.Add(f2);
-
             Funcionario f3 = new Funcionario();
             f3.Id = 3;
             f3.Nome = "Messi";
@@ -112,7 +100,6 @@ namespace Aula03Colecoes
             f3.Salario = 70.000M;
             f3.TipoFuncionario = TipoFuncionarioEnum.Aprendiz;
             lista.Add(f3);
-
             Funcionario f4 = new Funcionario();
             f4.Id = 4;
             f4.Nome = "Mbappe";
@@ -121,7 +108,6 @@ namespace Aula03Colecoes
             f4.Salario = 500.000M;
             f4.TipoFuncionario = TipoFuncionarioEnum.Aprendiz;
             lista.Add(f4);
-
             Funcionario f5 = new Funcionario();
             f5.Id = 5;
             f5.Nome = "Lewa";
@@ -130,7 +116,6 @@ namespace Aula03Colecoes
             f5.Salario = 90.000M;
             f5.TipoFuncionario = TipoFuncionarioEnum.Aprendiz;
             lista.Add(f5);
-
             Funcionario f6 = new Funcionario();
             f6.Id = 6;
             f6.Nome = "Roger Guedes";
@@ -146,7 +131,6 @@ namespace Aula03Colecoes
             if (fBusca != null)
             {
                 string dados = "";
-
                 dados += "======================================\n";
                 dados += string.Format("Id: {0}\n", fBusca.Id);
                 dados += string.Format("Nome: {0}\n", fBusca.Nome);
@@ -155,24 +139,17 @@ namespace Aula03Colecoes
                 dados += string.Format("Salario: {0:c2}\n", fBusca.Salario);
                 dados += string.Format("Tipo: {0}\n", fBusca.TipoFuncionario);
                 dados += "=====================================\n";
-
                 Console.WriteLine(dados);
             }
             else
-            {
                 Console.WriteLine("Funcionário Não Encontrado");
-            }
         }
-
         public static void ObterFuncionariosRecentes()
         {
             lista.RemoveAll(x => x.Id < 4);
-
             lista = lista.OrderBy(x => x.Salario).ToList();
             ExibirLista();
         }
-
-
         public static void ObterEstatisticas()
         {
             int qtd = lista.Count();
@@ -180,7 +157,6 @@ namespace Aula03Colecoes
             string mensagem = string.Format("Existem {0} Funcionários na Empresa e a Somatória total dos Salários é: {1:c2} Reais \n", qtd, somatoria);
             Console.WriteLine(mensagem);
         }
-
         public static void ValidarSalarioAdmissao()
         {
             Console.WriteLine("quantidade de funcionário que quer adicionar: \n");
@@ -189,45 +165,35 @@ namespace Aula03Colecoes
             for (int i = 0; i < escolha; i++)
             {
                 Funcionario func = new Funcionario();
-
                 Console.WriteLine("Digite o ID do funcionário: ");
                 func.Id = int.Parse(Console.ReadLine());
-
                 Console.WriteLine("Digite o nome do funcionário: ");
                 func.Nome = Console.ReadLine();
-
                 Console.WriteLine("Digite o CPF do funcionário: ");
                 func.Cpf = Console.ReadLine();
-
                 Console.WriteLine("Digite a Data de Admissão do funcionário: ");
                 func.DataAdmissao = DateTime.Parse(Console.ReadLine());
-
-                Console.WriteLine("Digite o Salário do funcionário: ");
-                func.Salario = decimal.Parse(Console.ReadLine());
-
-                Console.WriteLine("Qual é o Tipo de Contrato do Funcionário: 1 - CLT ou 2 - Aprendiz");
-                int opcao = int.Parse(Console.ReadLine());
-                if (opcao == 1)
+                if (func.DataAdmissao < DateTime.Now)
                 {
-                    func.TipoFuncionario = TipoFuncionarioEnum.CLT;
-                }
-                else if (opcao == 2)
-                {
-                    func.TipoFuncionario = TipoFuncionarioEnum.Aprendiz;
-                }
-                else
-                {
-                    Console.WriteLine("Opção invalida");
+                    Console.WriteLine("Não Foi possivel adicionar o Funcionário pois Data de Admissçao não pode ser menor que a data Atual\n");
                     continue;
                 }
-                if (func.Salario <= 0 || func.DataAdmissao < DateTime.Now)
+                Console.WriteLine("Digite o Salário do funcionário: ");
+                func.Salario = decimal.Parse(Console.ReadLine());
+                if (func.Salario <= 0)
                 {
                     Console.WriteLine("Não Foi possivel adicionar o Funcionário pois o Salário nao pode ser 0\n");
                     continue;
                 }
-                if (func.DataAdmissao < DateTime.Now)
+                Console.WriteLine("Qual é o Tipo de Contrato do Funcionário: 1 - CLT ou 2 - Aprendiz");
+                int opcao = int.Parse(Console.ReadLine());
+                if (opcao == 1)
+                    func.TipoFuncionario = TipoFuncionarioEnum.CLT;
+                else if (opcao == 2)
+                    func.TipoFuncionario = TipoFuncionarioEnum.Aprendiz;
+                else
                 {
-                    Console.WriteLine("Não Foi possivel adicionar o Funcionário pois Data de Admissçao não pode ser menor que a data Atual\n");
+                    Console.WriteLine("Opção invalida");
                     continue;
                 }
                 lista.Add(func);
@@ -241,10 +207,8 @@ namespace Aula03Colecoes
         public static void ValidarNome()
         {
             Funcionario func = new Funcionario();
-
             Console.WriteLine("Digite o ID do funcionário: ");
             func.Id = int.Parse(Console.ReadLine());
-
             Console.WriteLine("Digite o nome do funcionário: ");
             func.Nome = Console.ReadLine();
             if (func.Nome.Length < 2)
@@ -252,31 +216,20 @@ namespace Aula03Colecoes
                 Console.WriteLine("Nome inválido! O nome deve ter pelo menos 2 caracteres.");
                 return;
             }
-
             Console.WriteLine("Digite o CPF do funcionário: ");
             func.Cpf = Console.ReadLine();
-
             Console.WriteLine("Digite a Data de Admissão do funcionário: ");
             func.DataAdmissao = DateTime.Parse(Console.ReadLine());
-
             Console.WriteLine("Digite o Salário do funcionário: ");
             func.Salario = decimal.Parse(Console.ReadLine());
-
             Console.WriteLine("Qual é o Tipo de Contrato do Funcionário: 1 - CLT ou 2 - Aprendiz");
             int opcao = int.Parse(Console.ReadLine());
             if (opcao == 1)
-            {
                 func.TipoFuncionario = TipoFuncionarioEnum.CLT;
-            }
             else if (opcao == 2)
-            {
                 func.TipoFuncionario = TipoFuncionarioEnum.Aprendiz;
-            }
             else
-            {
                 Console.WriteLine("Opção invalida\n");
-
-            }
             lista.Add(func);
             Console.WriteLine("Funcionário(a) adicionado(a) !!!!!\n\n");
             ExibirLista();
@@ -288,30 +241,21 @@ namespace Aula03Colecoes
             Console.WriteLine("1 - Para CLT");
             Console.WriteLine("2 - Para Aprendiz");
             int opcao = int.Parse(Console.ReadLine());
-
             List<Funcionario> resultado;
-
             if (opcao == 1)
-            {
                 resultado = lista.FindAll(x => x.TipoFuncionario == TipoFuncionarioEnum.CLT);
-            }
             else if (opcao == 2)
-            {
                 resultado = lista.FindAll(x => x.TipoFuncionario == TipoFuncionarioEnum.Aprendiz);
-            }
             else
             {
                 Console.WriteLine("Opção inválida!");
                 return;
             }
-
             if (resultado.Count > 0)
             {
                 string dados = "";
-            
                 for (int i = 0; i < resultado.Count; i++)
                 {
-
                     dados += "======================================\n";
                     dados += string.Format("Id: {0}\n", resultado[i].Id);
                     dados += string.Format("Nome: {0}\n", resultado[i].Nome);
